@@ -142,6 +142,6 @@
         </foreach>
     </select>
     <select id="getUserListByRoleId" resultType="com.sy.pojo.SysUser">
-        
+
     </select>
 </mapper>
