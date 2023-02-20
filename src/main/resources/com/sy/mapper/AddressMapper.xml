@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sy.mapper.AddressMapper">
+    <!-- 嵌套表自动映射 ResultMap和ResultType都会映射 -->
+    <!-- setting name="autoMappingBehavior" value="FULL" -->
+    <!-- <select id="" userGenerateKeys=""> -->
+    <!-- userGenerateKeys 表示是否获取插入的id true? false -->
+    <!--keyProperty 表示现在把id放在传出过来的???某个属性中-->
+    <!--@MapKey  ==  List<Map<String,Object>>-->
+    <!--@param   命名参数-->
+    <!--${} ''-->
+    <!--#{} no ''-->
+    <!---->
+    <select id="selectByUserId" resultType="com.sy.pojo.Address">
+        select * from t_address where userId = #{userId}
+    </select>
+</mapper>
